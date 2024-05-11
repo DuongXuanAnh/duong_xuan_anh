@@ -1,4 +1,4 @@
-let currentLang = 'vn'; // Default language
+let currentLang = 'en'; // Default language
 
 $(document).ready(function() {
     $('#language-select').change(function() {

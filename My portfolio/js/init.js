@@ -35,6 +35,15 @@ jQuery(document).ready(function(){
 		cavani_tm_my_load();
 	});
 	
+
+	 // Funkce pro synchronizaci jazykových výběrů
+	 $('#language-select, #language-select-mobile').change(function() {
+        // Získání vybrané hodnoty z aktivního selectu
+        var selectedLanguage = $(this).val();
+        
+        // Nastavení stejné hodnoty pro oba selecty
+        $('#language-select, #language-select-mobile').val(selectedLanguage);
+    });
 });
 
 // -----------------------------------------------------

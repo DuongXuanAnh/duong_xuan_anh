@@ -707,7 +707,7 @@ h6 { font-size: 16px; }
 	color: #333;
 	text-transform: uppercase;
 	font-weight: 700;
-	letter-spacing: 8px;
+	letter-spacing: 2px;
 }
 .cavani_tm_title span:after{
 	position: absolute;
@@ -758,6 +758,7 @@ h6 { font-size: 16px; }
 }
 .cavani_tm_about .biography .right ul li .first{
 	min-width: 100px;
+	width: 150px;
 	font-weight: 700;
 }
 .cavani_tm_about .biography .right ul li a{
@@ -2254,7 +2255,7 @@ h6 { font-size: 16px; }
 	.cavani_tm_mainpart .author_image{width: 35%;}
 	.cavani_tm_mainpart .main_content{width: 65%;}
 	.cavani_tm_section .section_inner:before{width: 50px;}
-	.cavani_tm_title span{letter-spacing: 7px;}
+	.cavani_tm_title span{letter-spacing: 2px;}
 	.cavani_tm_title span:after{margin-left: 25px;}
 	.cavani_tm_header{height: 60px;line-height: 60px;padding: 0px 60px;}
 	.cavani_tm_footer{height: 60px;line-height: 60px;padding: 0px 60px;}
@@ -2338,7 +2339,7 @@ h6 { font-size: 16px; }
 	.cavani_tm_about .partners .list ul li{width: 50%;}
 	.cavani_tm_portfolio .portfolio_list ul{margin: 0px;}
 	.cavani_tm_portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
-	.cavani_tm_title span{letter-spacing: 4px;}
+	.cavani_tm_title span{letter-spacing: 2px;}
 	.cavani_tm_title span:after{margin-left: 15px;}
 	.cavani_tm_modalbox .box_inner{width: 300px;top: 60px;bottom: 40px;}
 	.cavani_tm_modalbox .close{margin-left: -25px;top: -37px;}

@@ -39,3 +39,12 @@ body {
 .languageContent ul li{
     margin-bottom: 20px;
 }
+
+
+.wrapper .right .first{
+    width: 120px;
+}
+
+.wrapper .right .second{
+    padding-left: 10px;
+}

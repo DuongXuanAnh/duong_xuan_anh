@@ -104,6 +104,8 @@ function cavani_tm_trigger_menu(){
 	var hamburger 		= jQuery('.cavani_tm_topbar .trigger .hamburger');
 	var mobileMenu		= jQuery('.cavani_tm_mobile_menu');
 	var mobileMenuList	= jQuery('.cavani_tm_mobile_menu ul li a');
+	var socialLinks     = jQuery('.cavani_tm_mobile_menu .social a'); 
+
 
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
@@ -118,10 +120,12 @@ function cavani_tm_trigger_menu(){
 		return false;
 	});
 	
-	mobileMenuList.on('click',function(){
-		jQuery('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
-		mobileMenu.removeClass('opened');
-		return false;
+	mobileMenuList.on('click',function(e){
+		if (!jQuery(e.target).closest(socialLinks).length) { // Kontrola, zda kliknutí nebylo na sociálních médiích
+			jQuery('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
+			mobileMenu.removeClass('opened');
+			return false;
+		}
 	});
 }
 

@@ -36,7 +36,6 @@ html {
 body{
 	overflow-x: hidden;
 	width: 100%;
-	font-family: "Open Sans";
 	font-size: 16px;
 	line-height: 1.7;
 	letter-spacing: 0px;
@@ -118,7 +117,6 @@ body.dark::-webkit-scrollbar {
 h1, h2, h3, h4, h5, h6{
 	font-weight:700;
 	line-height: 1.2;
-	font-family: "Poppins";
 	color: #333;
 }
 h1 { font-size: 45px; }
@@ -292,7 +290,6 @@ h6 { font-size: 16px; }
 	text-decoration: none;
 	color: #000;
 	text-transform: uppercase;
-	font-family: "Poppins";
 	font-size: 25px;
 	font-weight: 800;
 	letter-spacing: 2px;
@@ -320,7 +317,6 @@ h6 { font-size: 16px; }
 .cavani_tm_header .menu ul li a{
 	text-decoration: none;
 	color: #333;
-	font-family: "Poppins";
 	font-weight: 500;
 	padding: 0px 30px;
 	display: inline-block;
@@ -399,7 +395,6 @@ h6 { font-size: 16px; }
 	text-decoration: none;
 	color: #000;
 	text-transform: uppercase;
-	font-family: "Poppins";
 	font-size: 22px;
 	font-weight: 800;
 	letter-spacing: 2px;
@@ -480,7 +475,6 @@ h6 { font-size: 16px; }
 .cavani_tm_mobile_menu .menu_list ul li a{
 	text-decoration: none;
 	color: #333;
-	font-family: "Poppins";
 }
 .cavani_tm_mobile_menu .social{
 	width: 100%;
@@ -508,7 +502,6 @@ h6 { font-size: 16px; }
 }
 .cavani_tm_mobile_menu .copyright p{
 	color: #333;
-	font-family: "Poppins";
 }
 
 /*---------------------------------------------------*/
@@ -660,7 +653,6 @@ h6 { font-size: 16px; }
 	background-color: #333;
 	padding: 13px 38px;
 	border: 2px solid #333;
-	font-family: "Poppins";
 	font-weight: 500;
 	
 	-webkit-transition: all .3s ease;
@@ -712,7 +704,6 @@ h6 { font-size: 16px; }
 .cavani_tm_title span{
 	display: inline-block;
 	position: relative;
-	font-family: "Poppins";
 	color: #333;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -1261,7 +1252,6 @@ h6 { font-size: 16px; }
 .cavani_tm_portfolio .portfolio_filter ul li a{
 	text-decoration: none;
     color: #333;
-    font-family: "Poppins";
     font-weight: 500;
 	
 	-webkit-transition: all .3s ease;
@@ -1794,7 +1784,6 @@ h6 { font-size: 16px; }
     color: #333;
     font-size: 16px;
     font-weight: 600;
-    font-family: "Poppins";
 }
 .cavani_tm_news .news_list > ul > li .list_inner .details{
 	position: relative;
@@ -2161,7 +2150,6 @@ h6 { font-size: 16px; }
 }
 .cavani_tm_footer .copyright p{
 	color: #333;
-	font-family: "Poppins";
 }
 .cavani_tm_footer .social ul{
 	margin: 0px;

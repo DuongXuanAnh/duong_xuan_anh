@@ -16,8 +16,10 @@
 <title>Duong Xuan Anh</title>
 
 <!-- STYLES -->
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+
+
+
 
 <link rel="stylesheet" type="text/css" href="css/plugins.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -70,7 +72,14 @@
 							<li class="active"><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#portfolio">Portfolio</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="#contact" data-lang="contact">Contact</a></li>
+							<li>
+								<select id="language-select-mobile">
+									<option value="en">English</option>
+									<option value="cz">Čeština</option>
+									<option value="vn">Tiếng Việt</option>
+								</select>
+							</li>
 						</ul>
 					</div>
 					<div class="social">
@@ -100,9 +109,14 @@
 					<li class="active"><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
-					<!-- <li><a href="#service">Service</a></li> -->
-					<!-- <li><a href="#news">News</a></li> -->
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact" data-lang="contact">Contact</a></li>
+					<li style="margin-left: 10px;">
+						<select id="language-select">
+							<option value="en">English</option>
+							<option value="cz">Čeština</option>
+							<option value="vn">Tiếng Việt</option>
+						</select>
+					</li>
 				</ul>
 				<span class="ccc"></span>
 			</div>
@@ -124,16 +138,16 @@
 							<span class="line"></span>
 							<h3 class="job">
 								<span class="cd-headline clip"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
-									<span class="blc">I am </span>
+									<span class="blc" data-lang="Iam">I am </span>
 									<span class="cd-words-wrapper">
-									  <b class="is-visible">Developer</b>
-									  <b>Freelancer</b>
-									  <b>Interpreter (VN - CZ)</b>
+									  <b class="is-visible" data-lang="developer">Developer</b>
+									  <b data-lang="freelancer">Freelancer</b>
+									  <b data-lang="interpreter">Interpreter (VN - CZ)</b>
 									</span>
 								</span>
 							</h3>
 							<div class="cavani_tm_button transition_link">
-								<a href="#contact">Get in Touch</a>
+								<a href="#contact" data-lang="getInTouch">Get in Touch</a>
 							</div>
 						</div>
 					</div>
@@ -199,7 +213,7 @@
 											<ul>
 												<li>React</li>
 												<li>SASS / Bootstrap / AntDesign / Material UI</li>
-												<li>Node.js</li>
+												<li>Node.js / PHP</li>
 												<li>Python / C# / Java</li>										
 												<li>MySQL / PostgreSQL / Firebase</li>
 												<li>AI tools (ChatGPT, Gemini, GitHub Copilot...)</li>
@@ -367,19 +381,6 @@
 							</div>
 							<div class="portfolio_list">
 								<ul class="gallery_zoom">
-									<!-- <li class="youtube">
-										<div class="list_inner">
-											<div class="image">
-												<img src="img/thumbs/1-1.jpg" alt="" />
-												<div class="main" data-img-url="img/portfolio/youtube.jpg"></div>
-												<div class="details">
-													<h3>David Duong CZ</h3>
-													<span>Youtube</span>
-												</div>
-												<a class="cavani_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=QQpNdz_EfAk"></a>
-											</div>
-										</div>
-									</li> -->
 									<li class="certificate">
 										<div class="list_inner">
 											<div class="image">
@@ -466,15 +467,6 @@
 
 										</form>
 									</div>
-								<!-- </div> -->
-								 <!-- <div class="right">
-									<div class="map_wrap">
-										<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="355" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:355px;width:100%;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:355px;width:100%;}</style></div></div> -->
-										
-										<!-- Get your API here https://www.embedgooglemap.net -->
-										
-									<!-- </div>
-								 </div>  -->
 							</div>
 						</div>
 					</div>
@@ -511,6 +503,7 @@
 <!-- SCRIPTS -->
 <script src="js/jquery.js"></script>
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+<script src="js/languageSwitcher.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap"></script>

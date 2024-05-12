@@ -1,29 +1,4 @@
 @charset "utf-8";
-
-/*
-/*	Copyright (c) 2022 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-
-
-01)	CAVANI BASE
-02)	CAVANI HEADER
-03) CAVANI MOBILE MENU
-04) CAVANI MAINPART
-05) CAVANI HOME
-06) CAVANI ABOUT
-07) CAVANI PORTFOLIO
-08) CAVANI SERVICES
-09) CAVANI NEWS
-10) CAVANI CONTACT
-11) CAVANI FOOTER
-12) CAVANI MAGIC CURSOR
-13) CAVANI GLITCH EFFECT
-14) CAVANI PARTICLE EFFECT
-15) CAVANI RIPPLE EFFECT
-16) CAVANI MEDIA QUERIES (FOR SMALL DEVIVES)
-
-
 /*---------------------------------------------------*/
 /*	01) CAVANI BASE
 /*---------------------------------------------------*/
@@ -31,7 +6,8 @@
 html {
 	overflow-x: hidden;
 	padding: 0px;
-	margin: 0px
+	margin: 0px;
+	scroll-behavior: smooth;
 }
 body{
 	overflow-x: hidden;

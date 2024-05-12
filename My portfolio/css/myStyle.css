@@ -49,3 +49,37 @@ body {
     padding-left: 10px;
 }
 
+/* ----------------------------------------------- */
+
+@media (max-width: 1040px) {
+    .cavani_tm_mainpart{
+        overflow-y: auto;
+    }
+    .cavani_tm_section {
+        position: relative; /* Změní pozicování z 'absolute' na 'relative' */
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        overflow: visible;
+        opacity: 1 !important; /* Zajistí, že všechny sekce jsou viditelné */
+        visibility: visible !important; /* Zajistí, že všechny sekce jsou viditelné */
+        z-index: auto;
+        transition: none; /* Odebere efekty přechodu */
+    }
+
+    .cavani_tm_section .section_inner {
+        padding: 20px 15px;
+    }
+
+    img, .cavani_tm_home, .cavani_tm_about, .cavani_tm_contact, .cavani_tm_portfolio {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+

@@ -1,10 +1,3 @@
-/*
-/*
- * Copyright (c) 2022 Marketify
- * Author: Marketify
- * This file is made for CURRENT TEMPLATE
-*/
-
 
 jQuery(document).ready(function(){
 
@@ -66,41 +59,61 @@ function cavani_tm_modalbox(){
 // -----------------------------------------------------
 
 function cavani_tm_page_transition(){
+    "use strict";
+    
+    var section = jQuery('.cavani_tm_section');
+    var allLi = jQuery('.transition_link li');
+    var button = jQuery('.transition_link a');
+    var wrapper = jQuery('.cavani_tm_all_wrap');
+    var enter = wrapper.data('enter');
+    var exit = wrapper.data('exit');
+    
+    button.on('click', function() {
+
+		var element = jQuery(this);
+		var href = element.attr('href');
+
+        if ($(window).width() <= 1040) {
+
+			var mobileMenu		= jQuery('.cavani_tm_mobile_menu');
+			mobileMenu.removeClass('opened');
+
+			var hamburger 		= jQuery('.cavani_tm_topbar .trigger .hamburger');
+			hamburger.removeClass('is-active');
+
+			var top = jQuery(href).offset().top;
+			jQuery('#cavani_tm_mainpart').scrollTo(0, scrollTop);
+			
+
+        }else{
+		
+			if(element.parent().hasClass('cavani_tm_button')){
+				jQuery('.menu .transition_link a[href="'+href+'"]').trigger('click');
+				hashtag();
+				return false;
+			}
+			var sectionID = jQuery(href);
+			var parent = element.closest('li');
+				if(!parent.hasClass('active')) {
+					allLi.removeClass('active');
+					wrapper.find(section).removeClass('animated '+enter);
+					if(wrapper.hasClass('opened')) {
+						wrapper.find(section).addClass('animated '+exit);
+					}
+					parent.addClass('active');
+					wrapper.addClass('opened');
+					wrapper.find(sectionID).removeClass('animated '+exit).addClass('animated '+enter);
+					jQuery(section).addClass('hidden');
+					jQuery(sectionID).removeClass('hidden').addClass('active');
+				}
 	
-	"use strict";
-	
-	var section 		= jQuery('.cavani_tm_section');
-	var allLi 			= jQuery('.transition_link li');
-	var button			= jQuery('.transition_link a');
-	var wrapper 		= jQuery('.cavani_tm_all_wrap');
-	var enter	 		= wrapper.data('enter');
-	var exit		 	= wrapper.data('exit');
-	
-	button.on('click',function(){
-		var element 	= jQuery(this);
-		var href		= element.attr('href');
-		if(element.parent().hasClass('cavani_tm_button')){
-			jQuery('.menu .transition_link a[href="'+href+'"]').trigger('click');
-			hashtag();
 			return false;
 		}
-		var sectionID 	= jQuery(href);
-		var parent	 	= element.closest('li');
-			if(!parent.hasClass('active')) {
-				allLi.removeClass('active');
-				wrapper.find(section).removeClass('animated '+enter);
-				if(wrapper.hasClass('opened')) {
-					wrapper.find(section).addClass('animated '+exit);
-				}
-				parent.addClass('active');
-				wrapper.addClass('opened');
-				wrapper.find(sectionID).removeClass('animated '+exit).addClass('animated '+enter);
-				jQuery(section).addClass('hidden');
-				jQuery(sectionID).removeClass('hidden').addClass('active');
-			}
-		return false;
-	});
+
+       
+    });
 }
+
 
 // -----------------------------------------------------
 // ---------------   TRIGGER MENU    -------------------
@@ -114,7 +127,6 @@ function cavani_tm_trigger_menu(){
 	var mobileMenu		= jQuery('.cavani_tm_mobile_menu');
 	var mobileMenuList	= jQuery('.cavani_tm_mobile_menu ul li a');
 	var socialLinks     = jQuery('.cavani_tm_mobile_menu .social a'); 
-
 
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
@@ -136,6 +148,8 @@ function cavani_tm_trigger_menu(){
 			return false;
 		}
 	});
+
+
 }
 
 // -------------------------------------------------

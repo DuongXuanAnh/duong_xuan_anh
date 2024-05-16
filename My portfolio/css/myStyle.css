@@ -1,3 +1,8 @@
+body, html {
+    overflow-y: auto !important; /* nebo scroll */
+  /* height: 2000px; */
+}
+
 body {
     font-family: 'Roboto' !important;
 }
@@ -53,7 +58,8 @@ body {
 
 @media (max-width: 1040px) {
     .cavani_tm_mainpart{
-        overflow-y: auto;
+        /* overflow-y: auto; */
+        overflow: scroll !important;
     }
     .cavani_tm_section {
         position: relative; /* Změní pozicování z 'absolute' na 'relative' */
@@ -68,6 +74,7 @@ body {
         visibility: visible !important; /* Zajistí, že všechny sekce jsou viditelné */
         z-index: auto;
         transition: none; /* Odebere efekty přechodu */
+        overflow: scroll !important;
     }
 
     .cavani_tm_section .section_inner {
@@ -77,6 +84,15 @@ body {
     img, .cavani_tm_home, .cavani_tm_about, .cavani_tm_contact, .cavani_tm_portfolio {
         width: 100%;
         height: auto;
+    }
+
+    .cavani_tm_mobile_menu .menu_list ul li {
+        margin-bottom: 30px !important;
+        font-weight: bold;
+    }
+
+    .cavani_tm_home{
+        height: 100vh;
     }
 }
 

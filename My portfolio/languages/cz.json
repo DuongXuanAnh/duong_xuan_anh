@@ -11,7 +11,7 @@
     "name": "Přijmení a jméno: ",
     "study": "Studuji: ",
     "phone": "Telefon: ",
-    "duongxuananh": "Duong Xuan Anh",
+    "duongxuananh": "DUONG Xuan Anh",
     "mff": "Univerzita Karlova, Matematicko-fyzikální fakulta",
     "services": "Služby",
     "itServices": "IT Služby",
@@ -47,6 +47,7 @@
     "tirpitz": "Vizualizace a zkoušení algoritmů pro relační databáze",
     "myBachelorWork": "Moje Bakalářská Práce",
     "sendMessage": "Poslat zprávu",
-    "fillRequired": "Vyplňte prosím povinná pole"
+    "fillRequired": "Vyplňte prosím povinná pole",
+    "openMinded": "Být otevřený se naučit cokoliv nového"
 
 }

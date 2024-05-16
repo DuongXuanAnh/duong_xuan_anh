@@ -11,18 +11,13 @@ jQuery(document).ready(function(){
 	cavani_tm_my_progress();
 	cavani_tm_circular_progress();
 	cavani_tm_portfolio_popup();
-	cavani_tm_news_popup();
 	cavani_tm_service_popup();
-	cavani_tm_cursor();
 	cavani_tm_imgtosvg();
 	cavani_tm_popup();
 	cavani_tm_portfolio();
 	cavani_tm_data_images();
 	cavani_tm_contact_form();
-	cavani_tm_mycarousel();
 	hashtag();
-	cavani_tm_ripple();
-	cavani_tm_moving_box();
 	
 	jQuery(window).load('body', function(){
 		cavani_tm_my_load();
@@ -81,9 +76,7 @@ function cavani_tm_page_transition(){
 			var hamburger 		= jQuery('.cavani_tm_topbar .trigger .hamburger');
 			hamburger.removeClass('is-active');
 
-			var top = jQuery(href).offset().top;
-			jQuery('#cavani_tm_mainpart').scrollTo(0, scrollTop);
-			
+			window.location.hash = href;
 
         }else{
 		
@@ -148,7 +141,6 @@ function cavani_tm_trigger_menu(){
 			return false;
 		}
 	});
-
 
 }
 
@@ -244,38 +236,6 @@ function cavani_tm_portfolio_popup(){
 	});
 }
 
-// -------------------------------------------------
-// ----------------  NEWS POPUP  -------------------
-// -------------------------------------------------
-
-function cavani_tm_news_popup(){
-	
-	"use strict";
-	
-	var modalBox		= jQuery('.cavani_tm_modalbox');
-	var button			= jQuery('.cavani_tm_news .news_list > ul > li .post_title h3 a');
-	var closePopup		= modalBox.find('.close');
-	
-	button.on('click',function(){
-		var element 	= jQuery(this);
-		var parent 		= element.closest('li');
-		var content 	= parent.find('.news_hidden_details').html();
-		var image		= parent.data('img');
-		var category 	= parent.find('.extra_metas').html();
-		var title	 	= parent.find('.post_title a').text();
-		modalBox.addClass('opened');
-		modalBox.find('.description_wrap').html(content);
-		modalBox.find('.news_popup_informations').prepend('<div class="image"><img src="img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
-		modalBox.find('.news_popup_informations .image').after('<div class="details"><div class="meta">'+category+'</div><div class="title"><h3>'+title+'</h3></div><div>');
-		cavani_tm_data_images();
-		return false;
-	});
-	closePopup.on('click',function(){
-		modalBox.removeClass('opened');
-		modalBox.find('.description_wrap').html('');
-		return false;
-	});
-}
 
 // -------------------------------------------------
 // -------------  SERVICE POPUP  -------------------
@@ -344,33 +304,6 @@ function cavani_tm_my_load(){
 	var speed	= 500;
 	setTimeout(function(){cavani_tm_preloader();},speed);
 }
-
-// -----------------------------------------------------
-// ------------------   CURSOR    ----------------------
-// -----------------------------------------------------
-
-function cavani_tm_cursor(){
-	
-    "use strict";
-	
-	var myCursor	= jQuery('.mouse-cursor');
-	
-	if(myCursor.length){
-		if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-        let n, i = 0,
-            o = !1;
-        window.onmousemove = function (s) {
-            o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-        }, $("body").on("mouseenter", "a,.cavani_tm_topbar .trigger, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
-        }), $("body").on("mouseleave", "a,.cavani_tm_topbar .trigger, .cursor-pointer", function () {
-            $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-        }), e.style.visibility = "visible", t.style.visibility = "visible"
-    }
-	}
-};
 
 // -----------------------------------------------------
 // ---------------    IMAGE TO SVG    ------------------
@@ -545,38 +478,6 @@ function cavani_tm_contact_form(){
 }
 
 // -----------------------------------------------------
-// --------------    OWL CAROUSEL    -------------------
-// -----------------------------------------------------
-
- function cavani_tm_mycarousel(){
-	 
-	 "use strict";
-	 
-	var carousel			= jQuery('.cavani_tm_about .testimonials .owl-carousel');
-	
-	carousel.owlCarousel({
-		loop: true,
-		items: 2,
-		lazyLoad: false,
-		margin: 30,
-		autoplay: true,
-		autoplayTimeout: 7000,
-		dots: false,
-		nav: false,
-		navSpeed: false,
-		responsive : {
-			0 : {
-				items: 1
-			},
-			768 : {
-				items: 2
-			}
-		}
-	});
-	 
- }
-
-// -----------------------------------------------------
 // -------------------    HASHTAG    -------------------
 // -----------------------------------------------------
 
@@ -609,66 +510,5 @@ function currentLink(ccc,e){
 	
 }
 
-// -------------------------------------------------
-// -------------  GLITCH  --------------------------
-// -------------------------------------------------
 
-$(".glitch").mgGlitch({
-	destroy: false,
-	glitch: true,
-	scale: true,
-	blend: true,
-	blendModeType: "hue",
-	glitch1TimeMin: 200,
-	glitch1TimeMax: 400,
-	glitch2TimeMin: 10,
-	glitch2TimeMax: 100
-});
 
-// -------------------------------------------------
-// -------------  RIPPLE  --------------------------
-// -------------------------------------------------
-
-function cavani_tm_ripple(){
-	
-	"use strict";
-
-	jQuery('#ripple').ripples({
-		resolution: 500,
-		dropRadius: 20,
-		perturbance: 0.04
-	});
-}
-
-// -------------------------------------------------
-// -------------  MOVING BOX  ----------------------
-// -------------------------------------------------
-
-function cavani_tm_moving_box(){
-	
-	"use strict";
-	
-	var wrapper	= $('.cavani_tm_news');
-	var list	= wrapper.find('.news_list > ul > li');
-	if(!$('.cavani_fn_moving_box').length){
-		$('body').append('<div class="cavani_fn_moving_box"></div>');
-	}
-	var box		= $('.cavani_fn_moving_box');
-
-	list.on('mouseenter',function(){
-		var element 	= $(this);
-		var image		= element.data('img');
-		var ellOffset	= element.offset().top;
-
-		if(image === ''){
-			box.removeClass('opened');
-			return false;
-		}
-
-		box.addClass('opened');
-		box.css({backgroundImage:'url('+image+')',top:ellOffset+'px'});
-
-	}).on('mouseleave',function(){
-		box.removeClass('opened');
-	});	
-}

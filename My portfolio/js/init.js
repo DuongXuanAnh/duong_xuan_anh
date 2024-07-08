@@ -121,23 +121,39 @@ function cavani_tm_trigger_menu(){
 	var mobileMenuList	= jQuery('.cavani_tm_mobile_menu ul li a');
 	var socialLinks     = jQuery('.cavani_tm_mobile_menu .social a'); 
 
+	var man = jQuery('.man'); 
+
 	hamburger.on('click',function(){
 		var element 	= jQuery(this);
 
 		if(element.hasClass('is-active')){
 			element.removeClass('is-active');
 			mobileMenu.removeClass('opened');
+			man.removeClass('open');
 		}else{
 			element.addClass('is-active');
 			mobileMenu.addClass('opened');
+			man.addClass('open');
 		}
 		return false;
 	});
+
+
+	// Zavrit menu po klinuti mimo menu
+	man.on('click', function() {
+ 		// Kontrola šířky okna pro mobilní režim
+			man.removeClass('open');
+			jQuery('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
+			mobileMenu.removeClass('opened');
+			return false;
+	});
+	
 	
 	mobileMenuList.on('click',function(e){
 		if (!jQuery(e.target).closest(socialLinks).length) { // Kontrola, zda kliknutí nebylo na sociálních médiích
 			jQuery('.cavani_tm_topbar .trigger .hamburger').removeClass('is-active');
 			mobileMenu.removeClass('opened');
+			man.removeClass('open');
 			return false;
 		}
 	});

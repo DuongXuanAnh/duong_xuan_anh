@@ -16,3 +16,23 @@ width: 100%;
 th, td {
 padding: 15px;
 }
+
+.contact-info {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contact-info i {
+  margin-right: 8px;
+}
+.ms-2 {
+  margin-left: 8px;
+}
+
+.masthead{
+  background-color: #ff8b00 !important;
+}
+
+#about{
+  background-color: #ff8b00 !important;
+
+}
